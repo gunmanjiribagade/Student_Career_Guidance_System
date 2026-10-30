@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Career Guidance System</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Student Career Guidance System</h1>
+    <p>Answer 3 questions and get a career suggestion.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Your details</h2>
+
+      <!-- The form sends the answers to the Java program at /result -->
+      <form action="/result" method="get">
+
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"
+               pattern="[A-Za-z ]+" title="Letters and spaces only" required>
+
+        <label for="interest">1. What interests you the most?</label>
+        <select id="interest" name="interest" required>
+          <option value="" disabled selected>-- Select --</option>
+          <option value="1">Writing programs and building software</option>
+          <option value="2">Designing websites</option>
+          <option value="3">Working with data and numbers</option>
+          <option value="4">Protecting systems from hackers</option>
+          <option value="5">Computer networks and the internet</option>
+        </select>
+
+        <label for="skill">2. Which technical skill do you have?</label>
+        <select id="skill" name="skill" required>
+          <option value="" disabled selected>-- Select --</option>
+          <option value="1">Programming (Java / C / Python)</option>
+          <option value="2">HTML, CSS and JavaScript</option>
+          <option value="3">Excel, SQL and statistics</option>
+          <option value="4">Linux and security tools</option>
+          <option value="5">Networking basics</option>
+        </select>
+
+        <label for="strength">3. What is your biggest strength?</label>
+        <select id="strength" name="strength" required>
+          <option value="" disabled selected>-- Select --</option>
+          <option value="1">Logical thinking</option>
+          <option value="2">Creativity</option>
+          <option value="3">Analysing information</option>
+          <option value="4">Attention to detail and curiosity</option>
+          <option value="5">Patience in fixing problems</option>
+        </select>
+
+        <button type="submit">Get my career</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
